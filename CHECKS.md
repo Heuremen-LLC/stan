@@ -38,3 +38,13 @@
 - R: holds: base 559 of 665 calls CANNOT_TELL by the quote rule, 0 chosen by the model; STAN 665 of 665 chosen by the model, 0 by the rule. Recounted by Bones from the run files after the forensics agent reported it
 - caught: the page's base decided share (0.123) read as the base model deciding; most of what it did not decide was turned into CANNOT_TELL by our own rule, so the base and STAN columns do not measure the same act
 - cannot tell: what share of the converted base answers were right; the converted labels were never scored
+
+## 2026-11-12 15:05 Lexical baseline (PLAN_A_v2 s4) on gold dev, as defined
+- I: holds: cue rule fixed in PLAN_A_v2 (commit 0004ee3) before the run, cues taken mechanically from each PRESENT line, same top-6 chunks as the ceiling and teachers
+- II: holds: flagged and unflagged counted separately per code, nothing pooled
+- III: holds: signed difference flagged minus unflagged printed per code
+- V: holds: Wilson 95 for each rate, Newcombe 95 for the difference
+- VI: holds: F3 difference 0.218 [-0.011, 0.378] reaches zero, so CANNOT_TELL; F1 0.059 [-0.084, 0.142] CANNOT_TELL; F2 and F6 call PRESENT on 35/35 and 29/29 flagged and 56/57 and 62/63 unflagged, so no separation
+- R: holds: read from stan/lexical/dev_result.json written by lexical/lexical_baseline.py
+- caught: Bones first wrote "F3 separates somewhat" before computing the interval; the interval reaches zero. Fixed before commit
+- cannot tell: whether a stricter cue rule would separate; changing the rule now would be a knob, so it goes to Sage before fresh recounts
