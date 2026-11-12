@@ -58,3 +58,13 @@
 - R: holds: read from stan/teachers_ft/summary.json written by score_ft.py over outputs.jsonl (1,104 rows: Mistral on Armature 368, Llama and Gemma on the Mac seat 368 each, no errors, no duplicates)
 - caught: grounding is low. Gemma and Mistral often quoted the code's own definition text back as evidence, which the grounding check scores not_found. Grounded share of PRESENT/ABSENT calls is 7 to 51 percent
 - cannot tell: whether a different prompt or larger teachers would pass; PLAN_A_v2 s6 closes this route rather than tuning the prompt on dev
+
+## 2026-11-12 16:30 Thresholded lexical rule (Sage 20:15) on gold dev, dev-informed
+- I: holds: threshold formula (above the per-code dev median cue count) fixed by Sage's wording before running; it uses the count distribution, not the flags; cues are the same mechanical PRESENT-line words as the registered rule; labelled dev-informed because dev was seen
+- II: holds: flagged and unflagged counted separately per code
+- III: holds: signed differences printed; F6 negative (-0.044), others positive
+- V: holds: Wilson 95 per rate, Newcombe 95 per difference
+- VI: holds: F2 0.225 [0.015, 0.408] whole interval above zero; F1, F3, F6 CANNOT_TELL; F2 is one of four codes and with a four-way correction its interval reaches zero, said in the report
+- R: holds: read from stan/lexical/thresholded_rule.json; differences recomputed by hand from its counts
+- caught: none
+- cannot tell: whether F2's separation holds on fresh recounts; the rule is fixed now, before any fresh draw
