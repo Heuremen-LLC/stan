@@ -1,0 +1,13 @@
+{
+ "gold": 196,
+ "in_slice1": 100,
+ "no_arxiv_or_doi": 17,
+ "eligible": 2291,
+ "processed": 2291,
+ "kept": 2208,
+ "wall_flagged": 13,
+ "no_abstract": 44,
+ "duplicate_title": 26,
+ "slices_written": 22,
+ "leftover_unfilled": 8
+}
