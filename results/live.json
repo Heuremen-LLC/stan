@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T19:02:17Z",
+ "updated": "2026-11-12T19:27:28Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -13,7 +13,7 @@
      "labelled": 594
     },
     "round2": {
-     "labelled": 407
+     "labelled": 442
     }
    },
    "llama": {
@@ -99,7 +99,7 @@
      "mistral": 100
     },
     "labelled_round2": {
-     "gemma": 10,
+     "gemma": 45,
      "llama": 100,
      "mistral": 100
     }
@@ -779,6 +779,91 @@
      "wilson95": [
       0.54,
       0.728
+     ],
+     "majority_class_rate": 0.639
+    },
+    "F3": {
+     "n": 97,
+     "agree": 75,
+     "rate": 0.773,
+     "wilson95": [
+      0.68,
+      0.845
+     ],
+     "majority_class_rate": 0.773
+    },
+    "F4": {
+     "n": 97,
+     "agree": 33,
+     "rate": 0.34,
+     "wilson95": [
+      0.254,
+      0.439
+     ],
+     "majority_class_rate": 0.66
+    },
+    "F5": {
+     "n": 97,
+     "agree": 80,
+     "rate": 0.825,
+     "wilson95": [
+      0.737,
+      0.888
+     ],
+     "majority_class_rate": 0.825
+    },
+    "F6": {
+     "n": 97,
+     "agree": 68,
+     "rate": 0.701,
+     "wilson95": [
+      0.604,
+      0.783
+     ],
+     "majority_class_rate": 0.701
+    },
+    "F7": {
+     "n": 97,
+     "agree": 89,
+     "rate": 0.918,
+     "wilson95": [
+      0.846,
+      0.958
+     ],
+     "majority_class_rate": 0.918
+    }
+   }
+  },
+  "llama3.2:1b": {
+   "pooled": {
+    "agree": 472,
+    "n": 679,
+    "rate": 0.695,
+    "wilson95": [
+     0.659,
+     0.729
+    ]
+   },
+   "n_items": 97,
+   "labelled": 97,
+   "per_code": {
+    "F1": {
+     "n": 97,
+     "agree": 67,
+     "rate": 0.691,
+     "wilson95": [
+      0.593,
+      0.774
+     ],
+     "majority_class_rate": 0.753
+    },
+    "F2": {
+     "n": 97,
+     "agree": 60,
+     "rate": 0.619,
+     "wilson95": [
+      0.519,
+      0.709
      ],
      "majority_class_rate": 0.639
     },

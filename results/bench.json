@@ -151,5 +151,170 @@
   },
   "n_items": 97,
   "labelled": 97
+ },
+ "llama3.2:1b": {
+  "host": "http://192.168.8.145:11434",
+  "per_code": {
+   "F1": {
+    "n": 97,
+    "agree": 67,
+    "rate": 0.691,
+    "wilson95": [
+     0.593,
+     0.774
+    ],
+    "gold_present": 24,
+    "majority_class_rate": 0.753,
+    "decided_share": 0.082,
+    "status_counts": {
+     "CANNOT_TELL": 83,
+     "PRESENT": 8,
+     "PARSE_FAILED": 6
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 83,
+    "parse_failed": 6
+   },
+   "F2": {
+    "n": 97,
+    "agree": 60,
+    "rate": 0.619,
+    "wilson95": [
+     0.519,
+     0.709
+    ],
+    "gold_present": 35,
+    "majority_class_rate": 0.639,
+    "decided_share": 0.052,
+    "status_counts": {
+     "CANNOT_TELL": 86,
+     "PRESENT": 4,
+     "PARSE_FAILED": 6,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 86,
+    "parse_failed": 6
+   },
+   "F3": {
+    "n": 97,
+    "agree": 75,
+    "rate": 0.773,
+    "wilson95": [
+     0.68,
+     0.845
+    ],
+    "gold_present": 22,
+    "majority_class_rate": 0.773,
+    "decided_share": 0.01,
+    "status_counts": {
+     "CANNOT_TELL": 89,
+     "PARSE_FAILED": 7,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {
+     "NOT_RELEASED": 7
+    },
+    "ungrounded_to_CT_METHOD_UNSTATED": 82,
+    "parse_failed": 7
+   },
+   "F4": {
+    "n": 97,
+    "agree": 33,
+    "rate": 0.34,
+    "wilson95": [
+     0.254,
+     0.439
+    ],
+    "gold_present": 64,
+    "majority_class_rate": 0.66,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 87,
+     "PARSE_FAILED": 10
+    },
+    "cannot_tell_by_reason": {
+     "UNREADABLE": 36,
+     "NOT_RELEASED": 39
+    },
+    "ungrounded_to_CT_METHOD_UNSTATED": 12,
+    "parse_failed": 10
+   },
+   "F5": {
+    "n": 97,
+    "agree": 80,
+    "rate": 0.825,
+    "wilson95": [
+     0.737,
+     0.888
+    ],
+    "gold_present": 17,
+    "majority_class_rate": 0.825,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 88,
+     "PARSE_FAILED": 6,
+     "NOT_APPLICABLE": 3
+    },
+    "cannot_tell_by_reason": {
+     "METHOD_UNSTATED": 4,
+     "NOT_RELEASED": 8,
+     "UNREADABLE": 1
+    },
+    "ungrounded_to_CT_METHOD_UNSTATED": 75,
+    "parse_failed": 6
+   },
+   "F6": {
+    "n": 97,
+    "agree": 68,
+    "rate": 0.701,
+    "wilson95": [
+     0.604,
+     0.783
+    ],
+    "gold_present": 29,
+    "majority_class_rate": 0.701,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 91,
+     "PARSE_FAILED": 6
+    },
+    "cannot_tell_by_reason": {
+     "NOT_RELEASED": 13
+    },
+    "ungrounded_to_CT_METHOD_UNSTATED": 78,
+    "parse_failed": 6
+   },
+   "F7": {
+    "n": 97,
+    "agree": 89,
+    "rate": 0.918,
+    "wilson95": [
+     0.846,
+     0.958
+    ],
+    "gold_present": 8,
+    "majority_class_rate": 0.918,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 91,
+     "PARSE_FAILED": 6
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 91,
+    "parse_failed": 6
+   }
+  },
+  "pooled": {
+   "agree": 472,
+   "n": 679,
+   "rate": 0.695,
+   "wilson95": [
+    0.659,
+    0.729
+   ]
+  },
+  "n_items": 97,
+  "labelled": 97
  }
 }
