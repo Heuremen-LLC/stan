@@ -149,9 +149,17 @@ def pipelines():
     for key, d in (('sagar', 'sagar'), ('brands', 'brands'), ('quant', 'quant_desk')):
         st = jload('%s/%s/pipeline/state.json' % (B, d)) or {}; q = jload('%s/%s/index/queue_reachable.json' % (B, d)) or []
         merged = sum(1 for b in (st.get('batches') or {}).values() if b.get('stage') == 'merged')
-        conf = lines_any('%s/%s/index/verified_auto.jsonl' % (B, d))
+        _va = '%s/%s/index/verified_auto.jsonl' % (B, d)   # 12 Nov: papers, not rows (same unit as the pages)
+        _vp = set()
+        try: _vp = {json.loads(l)['arxiv'] for l in open(_va) if l.strip()}
+        except Exception: pass
+        conf = len(_vp)
         if key == 'sagar':
-            try: conf += sum(1 for l in open(B + '/sagar/index/verified.jsonl') if l.strip() and json.loads(l).get('bones') == 'PRESENT')
+            try:   # 12 Nov: same filter as the SAGAR pages: two-reader findings only (no F1/F4, no convention-F2, minus the row the second reader overruled), one per paper
+                _conv = {('2409.16196', 'F2'), ('2503.09731', 'F2'), ('2410.16565', 'F2'), ('2507.21566', 'F6')}
+                _ps = {json.loads(l)['arxiv'] for l in open(B + '/sagar/index/verified.jsonl') if l.strip() and json.loads(l).get('bones') == 'PRESENT'
+                       and json.loads(l)['code'][:2] not in ('F1', 'F4') and (json.loads(l)['arxiv'], json.loads(l)['code']) not in _conv}
+                conf += len(_ps - _vp)
             except FileNotFoundError: pass
         out[key] = {'batches_merged': merged, 'findings_confirmed': conf, 'queue_left': max(0, len(q) - ((st.get('next') or 1) - 1) * 12)}
     return out
