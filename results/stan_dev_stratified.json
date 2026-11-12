@@ -1,0 +1,150 @@
+{
+ "stan_on_gold_dev_by_teacher_agreement": {
+  "unanimous": {
+   "agree": 31,
+   "n": 42,
+   "rate": 0.738,
+   "wilson95": [
+    0.589,
+    0.847
+   ]
+  },
+  "split": {
+   "agree": 449,
+   "n": 637,
+   "rate": 0.705,
+   "wilson95": [
+    0.668,
+    0.739
+   ]
+  }
+ },
+ "by_code": {
+  "F1": {
+   "unanimous": {
+    "agree": 10,
+    "n": 13,
+    "wilson95": [
+     0.497,
+     0.918
+    ]
+   },
+   "split": {
+    "agree": 63,
+    "n": 84,
+    "wilson95": [
+     0.648,
+     0.83
+    ]
+   }
+  },
+  "F2": {
+   "unanimous": {
+    "agree": 3,
+    "n": 5,
+    "wilson95": [
+     0.231,
+     0.882
+    ]
+   },
+   "split": {
+    "agree": 59,
+    "n": 92,
+    "wilson95": [
+     0.539,
+     0.732
+    ]
+   }
+  },
+  "F3": {
+   "unanimous": {
+    "agree": 9,
+    "n": 10,
+    "wilson95": [
+     0.596,
+     0.982
+    ]
+   },
+   "split": {
+    "agree": 66,
+    "n": 87,
+    "wilson95": [
+     0.659,
+     0.836
+    ]
+   }
+  },
+  "F4": {
+   "unanimous": {
+    "agree": 6,
+    "n": 11,
+    "wilson95": [
+     0.28,
+     0.787
+    ]
+   },
+   "split": {
+    "agree": 27,
+    "n": 86,
+    "wilson95": [
+     0.226,
+     0.418
+    ]
+   }
+  },
+  "F5": {
+   "unanimous": {
+    "agree": 2,
+    "n": 2,
+    "wilson95": [
+     0.342,
+     1.0
+    ]
+   },
+   "split": {
+    "agree": 78,
+    "n": 95,
+    "wilson95": [
+     0.732,
+     0.885
+    ]
+   }
+  },
+  "F6": {
+   "unanimous": {
+    "agree": 0,
+    "n": 0,
+    "wilson95": [
+     null,
+     null
+    ]
+   },
+   "split": {
+    "agree": 68,
+    "n": 97,
+    "wilson95": [
+     0.604,
+     0.783
+    ]
+   }
+  },
+  "F7": {
+   "unanimous": {
+    "agree": 1,
+    "n": 1,
+    "wilson95": [
+     0.207,
+     1.0
+    ]
+   },
+   "split": {
+    "agree": 88,
+    "n": 96,
+    "wilson95": [
+     0.844,
+     0.957
+    ]
+   }
+  }
+ }
+}

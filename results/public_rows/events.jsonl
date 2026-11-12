@@ -1,0 +1,4 @@
+{"event": "harvest finished", "seat": "stan:v1", "training_rows": 271, "ts": "2026-11-12T17:06:47Z"}
+{"event": "SFT finished", "seat": "stan:v1", "ts": "2026-11-12T17:06:47Z"}
+{"event": "paired eval read", "seat": "stan:v1", "ts": "2026-11-12T17:06:47Z"}
+{"event": "rolled back after the paired eval", "seat": "stan:v1", "ts": "2026-11-12T17:06:47Z"}

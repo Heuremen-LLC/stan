@@ -1,0 +1,155 @@
+{
+ "qwen2.5:1.5b": {
+  "host": "http://192.168.8.145:11434",
+  "per_code": {
+   "F1": {
+    "n": 97,
+    "agree": 73,
+    "rate": 0.753,
+    "wilson95": [
+     0.658,
+     0.828
+    ],
+    "gold_present": 24,
+    "majority_class_rate": 0.753,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 85,
+     "NOT_APPLICABLE": 11,
+     "PARSE_FAILED": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 85,
+    "parse_failed": 1
+   },
+   "F2": {
+    "n": 97,
+    "agree": 62,
+    "rate": 0.639,
+    "wilson95": [
+     0.54,
+     0.728
+    ],
+    "gold_present": 35,
+    "majority_class_rate": 0.639,
+    "decided_share": 0.0,
+    "status_counts": {
+     "CANNOT_TELL": 78,
+     "NOT_APPLICABLE": 19
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 78,
+    "parse_failed": 0
+   },
+   "F3": {
+    "n": 97,
+    "agree": 75,
+    "rate": 0.773,
+    "wilson95": [
+     0.68,
+     0.845
+    ],
+    "gold_present": 22,
+    "majority_class_rate": 0.773,
+    "decided_share": 0.01,
+    "status_counts": {
+     "CANNOT_TELL": 77,
+     "NOT_APPLICABLE": 19,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 77,
+    "parse_failed": 0
+   },
+   "F4": {
+    "n": 97,
+    "agree": 33,
+    "rate": 0.34,
+    "wilson95": [
+     0.254,
+     0.439
+    ],
+    "gold_present": 64,
+    "majority_class_rate": 0.66,
+    "decided_share": 0.0,
+    "status_counts": {
+     "NOT_APPLICABLE": 97
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 0,
+    "parse_failed": 0
+   },
+   "F5": {
+    "n": 97,
+    "agree": 80,
+    "rate": 0.825,
+    "wilson95": [
+     0.737,
+     0.888
+    ],
+    "gold_present": 17,
+    "majority_class_rate": 0.825,
+    "decided_share": 0.01,
+    "status_counts": {
+     "CANNOT_TELL": 60,
+     "NOT_APPLICABLE": 36,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 60,
+    "parse_failed": 0
+   },
+   "F6": {
+    "n": 97,
+    "agree": 68,
+    "rate": 0.701,
+    "wilson95": [
+     0.604,
+     0.783
+    ],
+    "gold_present": 29,
+    "majority_class_rate": 0.701,
+    "decided_share": 0.01,
+    "status_counts": {
+     "CANNOT_TELL": 62,
+     "NOT_APPLICABLE": 34,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 62,
+    "parse_failed": 0
+   },
+   "F7": {
+    "n": 97,
+    "agree": 89,
+    "rate": 0.918,
+    "wilson95": [
+     0.846,
+     0.958
+    ],
+    "gold_present": 8,
+    "majority_class_rate": 0.918,
+    "decided_share": 0.01,
+    "status_counts": {
+     "CANNOT_TELL": 60,
+     "NOT_APPLICABLE": 36,
+     "ABSENT": 1
+    },
+    "cannot_tell_by_reason": {},
+    "ungrounded_to_CT_METHOD_UNSTATED": 60,
+    "parse_failed": 0
+   }
+  },
+  "pooled": {
+   "agree": 480,
+   "n": 679,
+   "rate": 0.707,
+   "wilson95": [
+    0.672,
+    0.74
+   ]
+  },
+  "n_items": 97,
+  "labelled": 97
+ }
+}
