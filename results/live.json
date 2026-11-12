@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T23:10:10Z",
+ "updated": "2026-11-12T23:36:58Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -365,37 +365,49 @@
   "cells": 12
  },
  "stan_e": {
-  "verified_positive_papers": 46,
+  "verified_positive_papers": 55,
   "runs": [
    {
-    "model": "mac_gemma4_12b",
-    "papers_seen": 79,
-    "papers_flagged": 78,
-    "hits": 5,
-    "verified_positive_papers_seen": 7,
+    "model": "arm_ministral3_8b",
+    "papers_seen": 10,
+    "papers_flagged": 10,
+    "hits": 1,
+    "verified_positive_papers_seen": 1,
     "recall_wilson95": [
-     0.359,
-     0.918
+     0.207,
+     1
     ],
-    "parse_fail": 16
+    "parse_fail": 51
+   },
+   {
+    "model": "mac_gemma4_12b",
+    "papers_seen": 111,
+    "papers_flagged": 108,
+    "hits": 7,
+    "verified_positive_papers_seen": 10,
+    "recall_wilson95": [
+     0.397,
+     0.892
+    ],
+    "parse_fail": 19
    },
    {
     "model": "arm_qwen3_8b",
-    "papers_seen": 121,
-    "papers_flagged": 121,
-    "hits": 8,
-    "verified_positive_papers_seen": 12,
+    "papers_seen": 132,
+    "papers_flagged": 132,
+    "hits": 9,
+    "verified_positive_papers_seen": 14,
     "recall_wilson95": [
-     0.391,
-     0.862
+     0.388,
+     0.837
     ],
-    "parse_fail": 126
+    "parse_fail": 155
    }
   ],
   "running_now": [
    {
     "machine": "arm",
-    "model": "qwen3:8b"
+    "model": "ministral-3:8b"
    },
    {
     "machine": "mac",
@@ -405,19 +417,19 @@
  },
  "pipelines": {
   "sagar": {
-   "batches_merged": 7,
-   "findings_confirmed": 52,
-   "queue_left": 478
+   "batches_merged": 9,
+   "findings_confirmed": 61,
+   "queue_left": 454
   },
   "brands": {
-   "batches_merged": 5,
-   "findings_confirmed": 24,
-   "queue_left": 135
+   "batches_merged": 8,
+   "findings_confirmed": 41,
+   "queue_left": 99
   },
   "quant": {
-   "batches_merged": 4,
-   "findings_confirmed": 17,
-   "queue_left": 791
+   "batches_merged": 6,
+   "findings_confirmed": 25,
+   "queue_left": 767
   }
  },
  "silver": {
