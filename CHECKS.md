@@ -48,3 +48,13 @@
 - R: holds: read from stan/lexical/dev_result.json written by lexical/lexical_baseline.py
 - caught: Bones first wrote "F3 separates somewhat" before computing the interval; the interval reaches zero. Fixed before commit
 - cannot tell: whether a stricter cue rule would separate; changing the rule now would be a knob, so it goes to Sage before fresh recounts
+
+## 2026-11-12 15:40 Full-text teacher re-baseline on gold dev, scored against PLAN_A_v2 s6 keep line: no teacher passes any code
+- I: holds: keep line (grounded PRESENT on flagged minus on unflagged, Newcombe 95, lower bound above zero) committed in 0004ee3 before the full scores were read; a dry run on about a quarter of rows was seen at 14:25 to test the script and is declared in PLAN_A_v2
+- II: holds: flagged and unflagged counted separately per teacher per code, nothing pooled across teachers or codes
+- III: holds: signed difference printed per cell; signs mixed (Mistral F6 point estimate negative, F1 positive)
+- V: holds: Wilson 95 per rate, Newcombe 95 per difference, statuses as written, no call converted
+- VI: holds: 0 of 12 teacher-code cells have the whole interval above zero; nearest Mistral F1 [-0.006, 0.423] CANNOT_TELL. Gemma and Mistral call PRESENT on 89 to 100 percent of unflagged pairs; Llama commits on under 10 percent of pairs
+- R: holds: read from stan/teachers_ft/summary.json written by score_ft.py over outputs.jsonl (1,104 rows: Mistral on Armature 368, Llama and Gemma on the Mac seat 368 each, no errors, no duplicates)
+- caught: grounding is low. Gemma and Mistral often quoted the code's own definition text back as evidence, which the grounding check scores not_found. Grounded share of PRESENT/ABSENT calls is 7 to 51 percent
+- cannot tell: whether a different prompt or larger teachers would pass; PLAN_A_v2 s6 closes this route rather than tuning the prompt on dev
