@@ -28,3 +28,13 @@
 - VI: n/a: descriptive share, not a stated-against-delivered comparison
 - R: holds: read from stan/results/decided_summary.json, written by decided_summary.py from baseline_dev.json and paired_test.json
 - cannot tell: whether the models abstain because the abstract lacks the evidence or because they cannot apply the codes. Sage's ceiling check decides it before v2
+
+## 2026-11-12 19:40 Base CANNOT_TELL on the test half is the quote rule's, not the model's (v1 forensics)
+- I: holds: both arms scored by the same norm_label rule (scripts/common.py:42-43) on the same 95 claims and seven codes, 665 calls each
+- II: holds: counted call by call from runs/base_test.jsonl and runs/stan_test.jsonl by flag, nothing netted
+- III: n/a: counts, no signed difference
+- V: holds: plain counts with their denominators, written to results/base_conversion.json
+- VI: n/a: descriptive count
+- R: holds: base 559 of 665 calls CANNOT_TELL by the quote rule, 0 chosen by the model; STAN 665 of 665 chosen by the model, 0 by the rule. Recounted by Bones from the run files after the forensics agent reported it
+- caught: the page's base decided share (0.123) read as the base model deciding; most of what it did not decide was turned into CANNOT_TELL by our own rule, so the base and STAN columns do not measure the same act
+- cannot tell: what share of the converted base answers were right; the converted labels were never scored

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T17:47:46Z",
+ "updated": "2026-11-12T18:13:13Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -10,7 +10,7 @@
   "labelled": {
    "gemma": {
     "round1": {
-     "labelled": 395
+     "labelled": 494
     },
     "round2": {
      "labelled": 298
@@ -21,15 +21,15 @@
      "labelled": 497
     },
     "round2": {
-     "labelled": 298
+     "labelled": 397
     }
    },
    "mistral": {
     "round1": {
-     "labelled": 436
+     "labelled": 497
     },
     "round2": {
-     "labelled": 298
+     "labelled": 384
     }
    }
   },
@@ -80,14 +80,14 @@
     "slice": 4,
     "items": 100,
     "labelled_round1": {
-     "gemma": 0,
+     "gemma": 99,
      "llama": 100,
-     "mistral": 39
+     "mistral": 100
     },
     "labelled_round2": {
      "gemma": 0,
-     "llama": 0,
-     "mistral": 0
+     "llama": 99,
+     "mistral": 86
     }
    },
    {
