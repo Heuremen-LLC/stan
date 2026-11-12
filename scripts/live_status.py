@@ -114,7 +114,7 @@ def build():
            'teachers': {'names': names, 'labelled': per, 'slices': slices, 'items_in_pool': items},
            'silver': silver, 'baseline_gold_dev': baseline(), 'bench_gold_dev': bench(),
            'training': ({k: run.get(k) for k in ('iters', 'train_rows', 'seconds', 'lr', 'rank')} | {'base': 'Qwen3-1.7B', 'license': 'Apache-2.0'}) if run else None,
-           'paired_test': ({'n_items': pt.get('n_items'), 'base': num(pt.get('base')), 'stan': num(pt.get('stan')), 'paired_stan_minus_base': num(pt.get('paired_stan_minus_base')),
+           'paired_test': ({'base_conversion': {k: v for k, v in jload(R + '/base_conversion.json').items() if k != 'note'}, 'n_items': pt.get('n_items'), 'base': num(pt.get('base')), 'stan': num(pt.get('stan')), 'paired_stan_minus_base': num(pt.get('paired_stan_minus_base')),
                             'band_reading': pt.get('band_reading'), 'kept': bool(pt.get('kept'))}) if pt else None,
            'stan_dev_by_teacher_agreement': num(st) if st else None,
            'plan': {'sha256': sha_of('PLAN.sha256'), 'stamp': stamp('PLAN.sha256.ots'), 'addendum_1_sha256': sha_of('PLAN_ADDENDUM_1.sha256'), 'addendum_1_stamp': stamp('PLAN_ADDENDUM_1.sha256.ots')}}

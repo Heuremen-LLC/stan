@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T18:13:13Z",
+ "updated": "2026-11-12T18:37:55Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -10,15 +10,15 @@
   "labelled": {
    "gemma": {
     "round1": {
-     "labelled": 494
+     "labelled": 580
     },
     "round2": {
-     "labelled": 298
+     "labelled": 397
     }
    },
    "llama": {
     "round1": {
-     "labelled": 497
+     "labelled": 597
     },
     "round2": {
      "labelled": 397
@@ -26,10 +26,10 @@
    },
    "mistral": {
     "round1": {
-     "labelled": 497
+     "labelled": 597
     },
     "round2": {
-     "labelled": 384
+     "labelled": 397
     }
    }
   },
@@ -85,18 +85,18 @@
      "mistral": 100
     },
     "labelled_round2": {
-     "gemma": 0,
+     "gemma": 99,
      "llama": 99,
-     "mistral": 86
+     "mistral": 99
     }
    },
    {
     "slice": 5,
     "items": 100,
     "labelled_round1": {
-     "gemma": 0,
-     "llama": 0,
-     "mistral": 0
+     "gemma": 86,
+     "llama": 100,
+     "mistral": 100
     },
     "labelled_round2": {
      "gemma": 0,
@@ -845,6 +845,18 @@
   "license": "Apache-2.0"
  },
  "paired_test": {
+  "base_conversion": {
+   "base": {
+    "calls": 665,
+    "ct_by_quote_rule": 559,
+    "ct_chosen_by_model": 0
+   },
+   "stan": {
+    "calls": 665,
+    "ct_by_quote_rule": 0,
+    "ct_chosen_by_model": 665
+   }
+  },
   "n_items": 95,
   "base": {
    "per_code": {
