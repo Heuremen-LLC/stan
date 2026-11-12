@@ -7,10 +7,10 @@ Never a title, abstract, quote, raw model output, path, host or gold label. A fi
 a model name, a code, a hex digest or a timestamp.   python3 live_status.py [--print]"""
 import json, os, re, sys, time
 
-S = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); R = S + '/results'
+S = os.path.dirname(os.path.dirname(os.path.abspath(__file__))); R = S + '/results'; B = os.path.dirname(S)
 OUT = R + '/live.json'
 STAGES = ('teachers', 'crosstalk', 'silver', 'training', 'paired test', 'kept', 'not kept')
-FIXED = set(STAGES) | {'submitted', 'confirmed', 'ABOVE', 'BELOW', 'CANNOT_TELL STRADDLES_EDGE', 'base', 'Qwen3-1.7B', 'Apache-2.0', 'gold dev', 'gold test'}
+FIXED = set(STAGES) | {'submitted', 'confirmed', 'ABOVE', 'BELOW', 'CANNOT_TELL STRADDLES_EDGE', 'base', 'Qwen3-1.7B', 'Apache-2.0', 'gold dev', 'gold test', 'closed', 'sagar', 'brands', 'quant', 'arm', 'mac'}
 CODES = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7']
 KEY_RE = re.compile(r'^[A-Za-z0-9_.:\-]{1,60}$'); MODEL_RE = re.compile(r'^[a-z0-9][a-z0-9.:_\-]{0,40}$')
 HEX_RE = re.compile(r'^[0-9a-f]{64}$'); TS_RE = re.compile(r'^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ$')
@@ -112,12 +112,48 @@ def build():
     silver['items_not_yet_labelled_by_all_three'] = (ss.get('outcomes') or {}).get('item_not_yet_labelled_by_all_three')
     out = {'updated': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()), 'stage': stage,
            'teachers': {'names': names, 'labelled': per, 'slices': slices, 'items_in_pool': items},
+           'stan_a': {'stage': 'closed', 'cells_passed': 0, 'cells': 12}, 'stan_e': stan_e(), 'pipelines': pipelines(),
            'silver': silver, 'baseline_gold_dev': baseline(), 'bench_gold_dev': bench(),
            'training': ({k: run.get(k) for k in ('iters', 'train_rows', 'seconds', 'lr', 'rank')} | {'base': 'Qwen3-1.7B', 'license': 'Apache-2.0'}) if run else None,
            'paired_test': ({'base_conversion': {k: v for k, v in jload(R + '/base_conversion.json').items() if k != 'note'}, 'n_items': pt.get('n_items'), 'base': num(pt.get('base')), 'stan': num(pt.get('stan')), 'paired_stan_minus_base': num(pt.get('paired_stan_minus_base')),
                             'band_reading': pt.get('band_reading'), 'kept': bool(pt.get('kept'))}) if pt else None,
            'stan_dev_by_teacher_agreement': num(st) if st else None,
            'plan': {'sha256': sha_of('PLAN.sha256'), 'stamp': stamp('PLAN.sha256.ots'), 'addendum_1_sha256': sha_of('PLAN_ADDENDUM_1.sha256'), 'addendum_1_stamp': stamp('PLAN_ADDENDUM_1.sha256.ots')}}
+    return out
+
+
+def stan_e():
+    lb = jload(S + '/errata/leaderboard.json') or {}; runs = []
+    for r in lb.get('board') or []:
+        m = str(r.get('run'))
+        if not MODEL_RE.match(m): continue
+        rc = r.get('recall') or [None, None, [None, None]]; w = rc[2] if len(rc) > 2 and rc[2] else [None, None]
+        runs.append({'model': m, 'papers_seen': r.get('papers_seen'), 'papers_flagged': r.get('papers_flagged'), 'hits': r.get('hits'),
+                     'verified_positive_papers_seen': r.get('verified_positive_papers_seen'), 'recall_wilson95': [w[0], w[1]], 'parse_fail': r.get('parse_fail')})
+    now = []; st = jload(S + '/hot/state.json') or {}
+    for mach in ('arm', 'mac'):
+        j = st.get(mach)
+        if not j: continue
+        mdl = str((j.get('env') or {}).get('MODEL', ''))
+        if MODEL_RE.match(mdl): now.append({'machine': mach, 'model': mdl})
+    return {'verified_positive_papers': lb.get('verified_positive_papers'), 'runs': runs, 'running_now': now}
+
+
+def lines_any(p):
+    try: return sum(1 for l in open(p) if l.strip())
+    except FileNotFoundError: return 0
+
+
+def pipelines():
+    out = {}
+    for key, d in (('sagar', 'sagar'), ('brands', 'brands'), ('quant', 'quant_desk')):
+        st = jload('%s/%s/pipeline/state.json' % (B, d)) or {}; q = jload('%s/%s/index/queue_reachable.json' % (B, d)) or []
+        merged = sum(1 for b in (st.get('batches') or {}).values() if b.get('stage') == 'merged')
+        conf = lines_any('%s/%s/index/verified_auto.jsonl' % (B, d))
+        if key == 'sagar':
+            try: conf += sum(1 for l in open(B + '/sagar/index/verified.jsonl') if l.strip() and json.loads(l).get('bones') == 'PRESENT')
+            except FileNotFoundError: pass
+        out[key] = {'batches_merged': merged, 'findings_confirmed': conf, 'queue_left': max(0, len(q) - ((st.get('next') or 1) - 1) * 12)}
     return out
 
 
@@ -135,5 +171,5 @@ def guard(o, path='$'):
 
 if __name__ == '__main__':
     o = build(); guard(o)
-    if '--print' in sys.argv: print(json.dumps(o, indent=1)[:3000]); raise SystemExit(0)
+    if '--print' in sys.argv: print(json.dumps(o, indent=1)[:6000]); raise SystemExit(0)
     tmp = OUT + '.tmp'; json.dump(o, open(tmp, 'w'), indent=1); os.replace(tmp, OUT); print('live_status: stage %s, written' % o['stage'])
