@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T08:10:20Z",
+ "updated": "2026-11-13T08:37:29Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -365,19 +365,19 @@
   "cells": 12
  },
  "stan_e": {
-  "verified_positive_papers": 137,
+  "verified_positive_papers": 148,
   "runs": [
    {
     "model": "mac_hermes3_8b",
-    "papers_seen": 51,
-    "papers_flagged": 51,
+    "papers_seen": 71,
+    "papers_flagged": 71,
     "hits": 5,
     "verified_positive_papers_seen": 6,
     "recall_wilson95": [
      0.436,
      0.97
     ],
-    "parse_fail": 116
+    "parse_fail": 159
    },
    {
     "model": "mac_gemma4_12b",
@@ -429,15 +429,15 @@
    },
    {
     "model": "arm_llama31_8b",
-    "papers_seen": 143,
-    "papers_flagged": 142,
-    "hits": 10,
-    "verified_positive_papers_seen": 19,
+    "papers_seen": 164,
+    "papers_flagged": 163,
+    "hits": 17,
+    "verified_positive_papers_seen": 27,
     "recall_wilson95": [
-     0.317,
-     0.727
+     0.442,
+     0.785
     ],
-    "parse_fail": 1160
+    "parse_fail": 1327
    },
    {
     "model": "mac_ernie45_21b",
@@ -465,8 +465,8 @@
  },
  "pipelines": {
   "sagar": {
-   "batches_merged": 81,
-   "findings_confirmed": 171,
+   "batches_merged": 84,
+   "findings_confirmed": 178,
    "queue_left": 0
   },
   "brands": {
@@ -475,9 +475,9 @@
    "queue_left": 0
   },
   "quant": {
-   "batches_merged": 50,
-   "findings_confirmed": 306,
-   "queue_left": 239
+   "batches_merged": 52,
+   "findings_confirmed": 321,
+   "queue_left": 215
   }
  },
  "silver": {
