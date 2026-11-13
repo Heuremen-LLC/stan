@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T11:07:49Z",
+ "updated": "2026-11-13T11:31:32Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -369,27 +369,27 @@
   "runs": [
    {
     "model": "mac_hermes3_8b",
-    "papers_seen": 192,
-    "papers_flagged": 192,
-    "hits": 31,
-    "verified_positive_papers_seen": 37,
+    "papers_seen": 210,
+    "papers_flagged": 210,
+    "hits": 41,
+    "verified_positive_papers_seen": 47,
     "recall_wilson95": [
-     0.689,
-     0.923
+     0.748,
+     0.94
     ],
-    "parse_fail": 373
+    "parse_fail": 408
    },
    {
     "model": "arm_llama31_8b",
-    "papers_seen": 264,
-    "papers_flagged": 263,
-    "hits": 43,
-    "verified_positive_papers_seen": 57,
+    "papers_seen": 283,
+    "papers_flagged": 282,
+    "hits": 46,
+    "verified_positive_papers_seen": 60,
     "recall_wilson95": [
-     0.629,
-     0.848
+     0.646,
+     0.856
     ],
-    "parse_fail": 2356
+    "parse_fail": 2518
    },
    {
     "model": "mac_gemma4_12b",
@@ -475,9 +475,9 @@
    "queue_left": 0
   },
   "quant": {
-   "batches_merged": 63,
-   "findings_confirmed": 404,
-   "queue_left": 23
+   "batches_merged": 66,
+   "findings_confirmed": 426,
+   "queue_left": 0
   }
  },
  "silver": {
