@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T06:28:15Z",
+ "updated": "2026-11-13T06:53:26Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -365,7 +365,7 @@
   "cells": 12
  },
  "stan_e": {
-  "verified_positive_papers": 106,
+  "verified_positive_papers": 116,
   "runs": [
    {
     "model": "mac_gemma4_12b",
@@ -380,18 +380,6 @@
     "parse_fail": 24
    },
    {
-    "model": "mac_qwen25_7b",
-    "papers_seen": 354,
-    "papers_flagged": 320,
-    "hits": 56,
-    "verified_positive_papers_seen": 82,
-    "recall_wilson95": [
-     0.576,
-     0.774
-    ],
-    "parse_fail": 19
-   },
-   {
     "model": "arm_ministral3_8b",
     "papers_seen": 240,
     "papers_flagged": 234,
@@ -402,6 +390,18 @@
      0.782
     ],
     "parse_fail": 1606
+   },
+   {
+    "model": "mac_qwen25_7b",
+    "papers_seen": 386,
+    "papers_flagged": 352,
+    "hits": 57,
+    "verified_positive_papers_seen": 86,
+    "recall_wilson95": [
+     0.558,
+     0.754
+    ],
+    "parse_fail": 24
    },
    {
     "model": "arm_qwen3_8b",
@@ -417,15 +417,15 @@
    },
    {
     "model": "arm_llama31_8b",
-    "papers_seen": 64,
-    "papers_flagged": 64,
+    "papers_seen": 86,
+    "papers_flagged": 86,
     "hits": 3,
-    "verified_positive_papers_seen": 6,
+    "verified_positive_papers_seen": 7,
     "recall_wilson95": [
-     0.188,
-     0.812
+     0.158,
+     0.75
     ],
-    "parse_fail": 526
+    "parse_fail": 689
    },
    {
     "model": "mac_ernie45_21b",
@@ -447,15 +447,15 @@
    },
    {
     "machine": "mac",
-    "model": "qwen2.5:7b"
+    "model": "hermes3:8b"
    }
   ]
  },
  "pipelines": {
   "sagar": {
-   "batches_merged": 67,
-   "findings_confirmed": 135,
-   "queue_left": 166
+   "batches_merged": 70,
+   "findings_confirmed": 142,
+   "queue_left": 130
   },
   "brands": {
    "batches_merged": 19,
@@ -463,9 +463,9 @@
    "queue_left": 0
   },
   "quant": {
-   "batches_merged": 41,
-   "findings_confirmed": 243,
-   "queue_left": 347
+   "batches_merged": 45,
+   "findings_confirmed": 265,
+   "queue_left": 299
   }
  },
  "silver": {
