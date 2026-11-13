@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T20:51:56Z",
+ "updated": "2026-11-13T21:17:36Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -453,15 +453,15 @@
    },
    {
     "model": "arm_deepseekr1_8b",
-    "papers_seen": 232,
-    "papers_flagged": 28,
+    "papers_seen": 247,
+    "papers_flagged": 29,
     "hits": 1,
-    "verified_positive_papers_seen": 52,
+    "verified_positive_papers_seen": 55,
     "recall_wilson95": [
      0.003,
-     0.101
+     0.096
     ],
-    "parse_fail": 2056
+    "parse_fail": 2188
    }
   ],
   "running_now": [
