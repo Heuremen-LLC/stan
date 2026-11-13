@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13T02:31:10Z",
+ "updated": "2026-11-13T03:00:29Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -429,7 +429,7 @@
  },
  "pipelines": {
   "sagar": {
-   "batches_merged": 32,
+   "batches_merged": 35,
    "findings_confirmed": 98,
    "queue_left": 346
   },
@@ -439,9 +439,9 @@
    "queue_left": 0
   },
   "quant": {
-   "batches_merged": 23,
-   "findings_confirmed": 108,
-   "queue_left": 563
+   "batches_merged": 25,
+   "findings_confirmed": 128,
+   "queue_left": 539
   }
  },
  "silver": {
