@@ -7,7 +7,7 @@ def check():
     h=hashlib.sha256(open(S+'/PLAN.md','rb').read()).hexdigest()
     rec=open(S+'/PLAN.sha256').read().split()[0] if os.path.exists(S+'/PLAN.sha256') else ''
     if rec!=h: die('PLAN.md does not match PLAN.sha256')
-    if not os.path.exists(S+'/PLAN.sha256.ots'): die('no .ots receipt submitted')
-    st=subprocess.run(['git','-C',S,'status','--porcelain','PLAN.md','PLAN.sha256','PLAN.sha256.ots'],capture_output=True,text=True).stdout.strip()
+    # 13 Nov 2026 (Wayfinder): no OpenTimestamps, no Bitcoin; the commit is the record
+    st=subprocess.run(['git','-C',S,'status','--porcelain','PLAN.md','PLAN.sha256'],capture_output=True,text=True).stdout.strip()
     if st: die('plan files not committed: '+st)
-    print('gate ok: plan committed, stamp submitted',flush=True)
+    print('gate ok: plan committed and matches its sha256',flush=True)
