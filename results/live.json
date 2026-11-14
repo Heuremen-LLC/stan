@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T11:40:58Z",
+ "updated": "2026-11-14T12:09:28Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -381,15 +381,15 @@
    },
    {
     "model": "arm_qwen3_8b",
-    "papers_seen": 321,
-    "papers_flagged": 321,
-    "hits": 62,
-    "verified_positive_papers_seen": 75,
+    "papers_seen": 367,
+    "papers_flagged": 367,
+    "hits": 72,
+    "verified_positive_papers_seen": 85,
     "recall_wilson95": [
-     0.726,
-     0.896
+     0.756,
+     0.908
     ],
-    "parse_fail": 438
+    "parse_fail": 471
    },
    {
     "model": "arm_llama31_8b",
