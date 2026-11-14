@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T18:00:20Z",
+ "updated": "2026-11-14T18:25:05Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -464,12 +464,7 @@
     "parse_fail": 32
    }
   ],
-  "running_now": [
-   {
-    "machine": "mac",
-    "model": "qwen3:1.7b"
-   }
-  ]
+  "running_now": []
  },
  "ladder": {
   "base_model": "qwen2.5-7b-instruct-4bit",
