@@ -115,7 +115,7 @@
     }
    }
   ],
-  "lora_v6": [
+  "lora_v8": [
    {
     "set": "test_hand",
     "chunks": 56,
@@ -123,53 +123,53 @@
     "unmatched_chunks": 0,
     "unparsed_by_arm": {
      "base": 1,
-     "lora_v6": 0
+     "lora_v8": 0
     },
     "pos": {
      "chunks": 26,
      "papers": 22,
      "base_flag": 9,
-     "model_flag": 19,
-     "flips_base_miss_to_flag": 10,
+     "model_flag": 23,
+     "flips_base_miss_to_flag": 14,
      "flips_flag_to_miss": 0,
-     "sign_test_p": 0.002
+     "sign_test_p": 0.0001
     },
     "neg": {
      "chunks": 30,
      "papers": 10,
      "base_flag": 1,
-     "model_flag": 6,
-     "flips_base_miss_to_flag": 6,
-     "flips_flag_to_miss": 1,
-     "sign_test_p": 0.125
+     "model_flag": 12,
+     "flips_base_miss_to_flag": 11,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.001
     },
     "recall": {
      "base": 0.346,
-     "model": 0.731,
+     "model": 0.885,
      "model_ci95_paper": [
-      0.583,
-      0.88
+      0.774,
+      1.0
      ],
-     "diff": 0.385,
+     "diff": 0.538,
      "diff_ci95_paper": [
-      0.219,
-      0.567
+      0.375,
+      0.708
      ],
      "outcome": "ABOVE"
     },
     "false_flag": {
      "base": 0.033,
-     "model": 0.2,
+     "model": 0.4,
      "model_ci95_paper": [
-      0.067,
-      0.333
+      0.148,
+      0.667
      ],
-     "diff": 0.167,
+     "diff": 0.367,
      "diff_ci95_paper": [
-      0.0,
-      0.333
+      0.133,
+      0.625
      ],
-     "outcome": "CANNOT_TELL"
+     "outcome": "ABOVE"
     }
    },
    {
@@ -179,51 +179,165 @@
     "unmatched_chunks": 0,
     "unparsed_by_arm": {
      "base": 0,
-     "lora_v6": 0
+     "lora_v8": 0
     },
     "pos": {
      "chunks": 23,
      "papers": 20,
      "base_flag": 6,
-     "model_flag": 17,
-     "flips_base_miss_to_flag": 11,
+     "model_flag": 19,
+     "flips_base_miss_to_flag": 13,
      "flips_flag_to_miss": 0,
-     "sign_test_p": 0.001
+     "sign_test_p": 0.0002
     },
     "neg": {
      "chunks": 39,
      "papers": 13,
      "base_flag": 0,
-     "model_flag": 4,
-     "flips_base_miss_to_flag": 4,
+     "model_flag": 10,
+     "flips_base_miss_to_flag": 10,
      "flips_flag_to_miss": 0,
-     "sign_test_p": 0.125
+     "sign_test_p": 0.002
     },
     "recall": {
      "base": 0.261,
-     "model": 0.739,
+     "model": 0.826,
      "model_ci95_paper": [
-      0.545,
-      0.909
+      0.667,
+      0.958
      ],
-     "diff": 0.478,
+     "diff": 0.565,
      "diff_ci95_paper": [
-      0.238,
-      0.704
+      0.333,
+      0.778
      ],
      "outcome": "ABOVE"
     },
     "false_flag": {
      "base": 0.0,
-     "model": 0.103,
+     "model": 0.256,
      "model_ci95_paper": [
-      0.026,
-      0.19
+      0.111,
+      0.41
      ],
-     "diff": 0.103,
+     "diff": 0.256,
      "diff_ci95_paper": [
-      0.026,
-      0.19
+      0.111,
+      0.41
+     ],
+     "outcome": "ABOVE"
+    }
+   }
+  ],
+  "lora_v10": [
+   {
+    "set": "test_hand",
+    "chunks": 56,
+    "papers": 32,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 1,
+     "lora_v10": 0
+    },
+    "pos": {
+     "chunks": 26,
+     "papers": 22,
+     "base_flag": 9,
+     "model_flag": 25,
+     "flips_base_miss_to_flag": 16,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0
+    },
+    "neg": {
+     "chunks": 30,
+     "papers": 10,
+     "base_flag": 1,
+     "model_flag": 14,
+     "flips_base_miss_to_flag": 13,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0002
+    },
+    "recall": {
+     "base": 0.346,
+     "model": 0.962,
+     "model_ci95_paper": [
+      0.867,
+      1.0
+     ],
+     "diff": 0.615,
+     "diff_ci95_paper": [
+      0.429,
+      0.783
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.033,
+     "model": 0.467,
+     "model_ci95_paper": [
+      0.267,
+      0.667
+     ],
+     "diff": 0.433,
+     "diff_ci95_paper": [
+      0.242,
+      0.63
+     ],
+     "outcome": "ABOVE"
+    }
+   },
+   {
+    "set": "test_pipeline",
+    "chunks": 62,
+    "papers": 33,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 0,
+     "lora_v10": 0
+    },
+    "pos": {
+     "chunks": 23,
+     "papers": 20,
+     "base_flag": 6,
+     "model_flag": 19,
+     "flips_base_miss_to_flag": 13,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0002
+    },
+    "neg": {
+     "chunks": 39,
+     "papers": 13,
+     "base_flag": 0,
+     "model_flag": 13,
+     "flips_base_miss_to_flag": 13,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0002
+    },
+    "recall": {
+     "base": 0.261,
+     "model": 0.826,
+     "model_ci95_paper": [
+      0.65,
+      0.962
+     ],
+     "diff": 0.565,
+     "diff_ci95_paper": [
+      0.35,
+      0.765
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.0,
+     "model": 0.333,
+     "model_ci95_paper": [
+      0.167,
+      0.519
+     ],
+     "diff": 0.333,
+     "diff_ci95_paper": [
+      0.167,
+      0.519
      ],
      "outcome": "ABOVE"
     }
@@ -261,13 +375,13 @@
      "base": 0.346,
      "model": 0.577,
      "model_ci95_paper": [
-      0.393,
-      0.76
+      0.381,
+      0.769
      ],
      "diff": 0.231,
      "diff_ci95_paper": [
       0.0,
-      0.444
+      0.448
      ],
      "outcome": "CANNOT_TELL"
     },
@@ -317,13 +431,13 @@
      "base": 0.261,
      "model": 0.522,
      "model_ci95_paper": [
-      0.333,
+      0.318,
       0.714
      ],
      "diff": 0.261,
      "diff_ci95_paper": [
-      0.043,
-      0.481
+      0.042,
+      0.5
      ],
      "outcome": "ABOVE"
     },
@@ -332,14 +446,242 @@
      "model": 0.051,
      "model_ci95_paper": [
       0.0,
-      0.128
+      0.121
      ],
      "diff": 0.051,
      "diff_ci95_paper": [
       0.0,
-      0.128
+      0.121
      ],
      "outcome": "CANNOT_TELL"
+    }
+   }
+  ],
+  "lora_v9": [
+   {
+    "set": "test_hand",
+    "chunks": 56,
+    "papers": 32,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 1,
+     "lora_v9": 0
+    },
+    "pos": {
+     "chunks": 26,
+     "papers": 22,
+     "base_flag": 9,
+     "model_flag": 25,
+     "flips_base_miss_to_flag": 16,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0
+    },
+    "neg": {
+     "chunks": 30,
+     "papers": 10,
+     "base_flag": 1,
+     "model_flag": 17,
+     "flips_base_miss_to_flag": 16,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0
+    },
+    "recall": {
+     "base": 0.346,
+     "model": 0.962,
+     "model_ci95_paper": [
+      0.864,
+      1.0
+     ],
+     "diff": 0.615,
+     "diff_ci95_paper": [
+      0.423,
+      0.786
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.033,
+     "model": 0.567,
+     "model_ci95_paper": [
+      0.333,
+      0.778
+     ],
+     "diff": 0.533,
+     "diff_ci95_paper": [
+      0.31,
+      0.75
+     ],
+     "outcome": "ABOVE"
+    }
+   },
+   {
+    "set": "test_pipeline",
+    "chunks": 62,
+    "papers": 33,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 0,
+     "lora_v9": 0
+    },
+    "pos": {
+     "chunks": 23,
+     "papers": 20,
+     "base_flag": 6,
+     "model_flag": 20,
+     "flips_base_miss_to_flag": 14,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0001
+    },
+    "neg": {
+     "chunks": 39,
+     "papers": 13,
+     "base_flag": 0,
+     "model_flag": 16,
+     "flips_base_miss_to_flag": 16,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0
+    },
+    "recall": {
+     "base": 0.261,
+     "model": 0.87,
+     "model_ci95_paper": [
+      0.727,
+      1.0
+     ],
+     "diff": 0.609,
+     "diff_ci95_paper": [
+      0.381,
+      0.821
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.0,
+     "model": 0.41,
+     "model_ci95_paper": [
+      0.242,
+      0.576
+     ],
+     "diff": 0.41,
+     "diff_ci95_paper": [
+      0.242,
+      0.576
+     ],
+     "outcome": "ABOVE"
+    }
+   }
+  ],
+  "lora_v11": [
+   {
+    "set": "test_hand",
+    "chunks": 56,
+    "papers": 32,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 1,
+     "lora_v11": 0
+    },
+    "pos": {
+     "chunks": 26,
+     "papers": 22,
+     "base_flag": 9,
+     "model_flag": 20,
+     "flips_base_miss_to_flag": 13,
+     "flips_flag_to_miss": 2,
+     "sign_test_p": 0.0074
+    },
+    "neg": {
+     "chunks": 30,
+     "papers": 10,
+     "base_flag": 1,
+     "model_flag": 7,
+     "flips_base_miss_to_flag": 7,
+     "flips_flag_to_miss": 1,
+     "sign_test_p": 0.0703
+    },
+    "recall": {
+     "base": 0.346,
+     "model": 0.769,
+     "model_ci95_paper": [
+      0.588,
+      0.929
+     ],
+     "diff": 0.423,
+     "diff_ci95_paper": [
+      0.16,
+      0.68
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.033,
+     "model": 0.233,
+     "model_ci95_paper": [
+      0.095,
+      0.375
+     ],
+     "diff": 0.2,
+     "diff_ci95_paper": [
+      0.067,
+      0.333
+     ],
+     "outcome": "ABOVE"
+    }
+   },
+   {
+    "set": "test_pipeline",
+    "chunks": 62,
+    "papers": 33,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 0,
+     "lora_v11": 0
+    },
+    "pos": {
+     "chunks": 23,
+     "papers": 20,
+     "base_flag": 6,
+     "model_flag": 10,
+     "flips_base_miss_to_flag": 6,
+     "flips_flag_to_miss": 2,
+     "sign_test_p": 0.2891
+    },
+    "neg": {
+     "chunks": 39,
+     "papers": 13,
+     "base_flag": 0,
+     "model_flag": 6,
+     "flips_base_miss_to_flag": 6,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.0312
+    },
+    "recall": {
+     "base": 0.261,
+     "model": 0.435,
+     "model_ci95_paper": [
+      0.25,
+      0.643
+     ],
+     "diff": 0.174,
+     "diff_ci95_paper": [
+      -0.056,
+      0.409
+     ],
+     "outcome": "CANNOT_TELL"
+    },
+    "false_flag": {
+     "base": 0.0,
+     "model": 0.154,
+     "model_ci95_paper": [
+      0.044,
+      0.282
+     ],
+     "diff": 0.154,
+     "diff_ci95_paper": [
+      0.044,
+      0.282
+     ],
+     "outcome": "ABOVE"
     }
    }
   ]
