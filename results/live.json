@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T00:48:59Z",
+ "updated": "2026-11-14T01:17:58Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -381,15 +381,15 @@
    },
    {
     "model": "mac_gemma4_12b",
-    "papers_seen": 470,
-    "papers_flagged": 454,
+    "papers_seen": 480,
+    "papers_flagged": 464,
     "hits": 82,
     "verified_positive_papers_seen": 106,
     "recall_wilson95": [
      0.685,
      0.843
     ],
-    "parse_fail": 72
+    "parse_fail": 75
    },
    {
     "model": "arm_llama31_8b",
@@ -440,6 +440,18 @@
     "parse_fail": 155
    },
    {
+    "model": "arm_deepseekr1_8b",
+    "papers_seen": 406,
+    "papers_flagged": 54,
+    "hits": 3,
+    "verified_positive_papers_seen": 93,
+    "recall_wilson95": [
+     0.011,
+     0.091
+    ],
+    "parse_fail": 3483
+   },
+   {
     "model": "mac_ernie45_21b",
     "papers_seen": 300,
     "papers_flagged": 29,
@@ -450,28 +462,12 @@
      0.109
     ],
     "parse_fail": 237
-   },
-   {
-    "model": "arm_deepseekr1_8b",
-    "papers_seen": 390,
-    "papers_flagged": 48,
-    "hits": 2,
-    "verified_positive_papers_seen": 90,
-    "recall_wilson95": [
-     0.006,
-     0.077
-    ],
-    "parse_fail": 3323
    }
   ],
   "running_now": [
    {
     "machine": "arm",
     "model": "deepseek-r1:8b"
-   },
-   {
-    "machine": "mac",
-    "model": "gemma4:12b-it-qat"
    }
   ]
  },
