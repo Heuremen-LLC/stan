@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T15:40:13Z",
+ "updated": "2026-11-14T16:04:38Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -369,8 +369,8 @@
   "runs": [
    {
     "model": "arm_qwen3_8b",
-    "papers_seen": 739,
-    "papers_flagged": 739,
+    "papers_seen": 740,
+    "papers_flagged": 740,
     "hits": 139,
     "verified_positive_papers_seen": 155,
     "recall_wilson95": [
