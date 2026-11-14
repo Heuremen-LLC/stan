@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T16:04:38Z",
+ "updated": "2026-11-14T16:43:15Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -467,11 +467,11 @@
   "running_now": [
    {
     "machine": "arm",
-    "model": "qwen3:8b"
+    "model": "llama3.1:8b"
    },
    {
     "machine": "mac",
-    "model": "gemma4:12b-it-qat"
+    "model": "ernie4.5:21b-a3b"
    }
   ]
  },
