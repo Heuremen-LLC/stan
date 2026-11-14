@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T03:19:09Z",
+ "updated": "2026-11-14T03:41:51Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -381,15 +381,15 @@
    },
    {
     "model": "mac_gemma4_12b",
-    "papers_seen": 512,
-    "papers_flagged": 494,
-    "hits": 88,
-    "verified_positive_papers_seen": 114,
+    "papers_seen": 548,
+    "papers_flagged": 526,
+    "hits": 94,
+    "verified_positive_papers_seen": 122,
     "recall_wilson95": [
-     0.687,
-     0.839
+     0.688,
+     0.836
     ],
-    "parse_fail": 79
+    "parse_fail": 80
    },
    {
     "model": "arm_llama31_8b",
@@ -440,6 +440,18 @@
     "parse_fail": 155
    },
    {
+    "model": "arm_deepseekr1_8b",
+    "papers_seen": 515,
+    "papers_flagged": 62,
+    "hits": 4,
+    "verified_positive_papers_seen": 115,
+    "recall_wilson95": [
+     0.014,
+     0.086
+    ],
+    "parse_fail": 4286
+   },
+   {
     "model": "mac_ernie45_21b",
     "papers_seen": 300,
     "papers_flagged": 29,
@@ -450,18 +462,6 @@
      0.109
     ],
     "parse_fail": 237
-   },
-   {
-    "model": "arm_deepseekr1_8b",
-    "papers_seen": 496,
-    "papers_flagged": 60,
-    "hits": 3,
-    "verified_positive_papers_seen": 111,
-    "recall_wilson95": [
-     0.009,
-     0.076
-    ],
-    "parse_fail": 4153
    }
   ],
   "running_now": [
