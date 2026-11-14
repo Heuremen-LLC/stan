@@ -228,6 +228,120 @@
      "outcome": "ABOVE"
     }
    }
+  ],
+  "lora_v7": [
+   {
+    "set": "test_hand",
+    "chunks": 56,
+    "papers": 32,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 1,
+     "lora_v7": 0
+    },
+    "pos": {
+     "chunks": 26,
+     "papers": 22,
+     "base_flag": 9,
+     "model_flag": 15,
+     "flips_base_miss_to_flag": 8,
+     "flips_flag_to_miss": 2,
+     "sign_test_p": 0.1094
+    },
+    "neg": {
+     "chunks": 30,
+     "papers": 10,
+     "base_flag": 1,
+     "model_flag": 0,
+     "flips_base_miss_to_flag": 0,
+     "flips_flag_to_miss": 1,
+     "sign_test_p": 1.0
+    },
+    "recall": {
+     "base": 0.346,
+     "model": 0.577,
+     "model_ci95_paper": [
+      0.393,
+      0.76
+     ],
+     "diff": 0.231,
+     "diff_ci95_paper": [
+      0.0,
+      0.444
+     ],
+     "outcome": "CANNOT_TELL"
+    },
+    "false_flag": {
+     "base": 0.033,
+     "model": 0.0,
+     "model_ci95_paper": [
+      0.0,
+      0.0
+     ],
+     "diff": -0.033,
+     "diff_ci95_paper": [
+      -0.111,
+      0.0
+     ],
+     "outcome": "CANNOT_TELL"
+    }
+   },
+   {
+    "set": "test_pipeline",
+    "chunks": 62,
+    "papers": 33,
+    "unmatched_chunks": 0,
+    "unparsed_by_arm": {
+     "base": 0,
+     "lora_v7": 0
+    },
+    "pos": {
+     "chunks": 23,
+     "papers": 20,
+     "base_flag": 6,
+     "model_flag": 12,
+     "flips_base_miss_to_flag": 7,
+     "flips_flag_to_miss": 1,
+     "sign_test_p": 0.0703
+    },
+    "neg": {
+     "chunks": 39,
+     "papers": 13,
+     "base_flag": 0,
+     "model_flag": 2,
+     "flips_base_miss_to_flag": 2,
+     "flips_flag_to_miss": 0,
+     "sign_test_p": 0.5
+    },
+    "recall": {
+     "base": 0.261,
+     "model": 0.522,
+     "model_ci95_paper": [
+      0.333,
+      0.714
+     ],
+     "diff": 0.261,
+     "diff_ci95_paper": [
+      0.043,
+      0.481
+     ],
+     "outcome": "ABOVE"
+    },
+    "false_flag": {
+     "base": 0.0,
+     "model": 0.051,
+     "model_ci95_paper": [
+      0.0,
+      0.128
+     ],
+     "diff": 0.051,
+     "diff_ci95_paper": [
+      0.0,
+      0.128
+     ],
+     "outcome": "CANNOT_TELL"
+    }
+   }
   ]
  }
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14T02:18:36Z",
+ "updated": "2026-11-14T02:54:43Z",
  "stage": "not kept",
  "teachers": {
   "names": [
@@ -453,21 +453,25 @@
    },
    {
     "model": "arm_deepseekr1_8b",
-    "papers_seen": 465,
+    "papers_seen": 476,
     "papers_flagged": 59,
     "hits": 3,
-    "verified_positive_papers_seen": 103,
+    "verified_positive_papers_seen": 107,
     "recall_wilson95": [
      0.01,
-     0.082
+     0.079
     ],
-    "parse_fail": 3918
+    "parse_fail": 4030
    }
   ],
   "running_now": [
    {
     "machine": "arm",
     "model": "deepseek-r1:8b"
+   },
+   {
+    "machine": "mac",
+    "model": "gemma4:12b-it-qat"
    }
   ]
  },
@@ -592,6 +596,23 @@
      "neg_flag": 4,
      "parse_fail": 0
     }
+   },
+   {
+    "model": "lora_v7",
+    "test_hand": {
+     "pos": 27,
+     "pos_flag": 16,
+     "neg": 30,
+     "neg_flag": 0,
+     "parse_fail": 0
+    },
+    "test_pipeline": {
+     "pos": 23,
+     "pos_flag": 12,
+     "neg": 39,
+     "neg_flag": 2,
+     "parse_fail": 0
+    }
    }
   ],
   "clustered": [
@@ -681,6 +702,50 @@
     ],
     "false_flag_outcome": "ABOVE",
     "false_flag_flips_up": 4,
+    "false_flag_flips_down": 0
+   },
+   {
+    "model": "lora_v7",
+    "set": "test_hand",
+    "papers": 32,
+    "chunks": 56,
+    "recall_diff": 0.231,
+    "recall_diff_ci95": [
+     0.0,
+     0.444
+    ],
+    "recall_outcome": "CANNOT_TELL",
+    "recall_flips_up": 8,
+    "recall_flips_down": 2,
+    "false_flag_diff": -0.033,
+    "false_flag_diff_ci95": [
+     -0.111,
+     0.0
+    ],
+    "false_flag_outcome": "CANNOT_TELL",
+    "false_flag_flips_up": 0,
+    "false_flag_flips_down": 1
+   },
+   {
+    "model": "lora_v7",
+    "set": "test_pipeline",
+    "papers": 33,
+    "chunks": 62,
+    "recall_diff": 0.261,
+    "recall_diff_ci95": [
+     0.043,
+     0.481
+    ],
+    "recall_outcome": "ABOVE",
+    "recall_flips_up": 7,
+    "recall_flips_down": 1,
+    "false_flag_diff": 0.051,
+    "false_flag_diff_ci95": [
+     0.0,
+     0.128
+    ],
+    "false_flag_outcome": "CANNOT_TELL",
+    "false_flag_flips_up": 2,
     "false_flag_flips_down": 0
    }
   ],
